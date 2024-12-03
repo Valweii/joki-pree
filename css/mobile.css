@@ -1,31 +1,35 @@
 /* Website Template by freewebsitetemplates.com */
 body {
 	min-width: 0;
+	max-width: 100%;
 }
 #header {
+	display: flex;
+	justify-content: space-between;
 	padding: 20px 0;
-	position: relative;
-	width: 100%;
+	width: 100vw;
 }
 #header a.logo {
-	width: 80%;
+	width: 0%;
 }
 #header a.logo img {
 	width: 100%;
 }
 #mobile-navigation {
-	background: url(../images/mobile-menu.png) no-repeat 0 0;
 	display: block;
+	background: url(../images/mobile-menu.png) no-repeat;
 	height: 50px;
-	margin: 30px auto 0;
-	padding: 0;
 	width: 50px;
+	padding: 0;
+	margin: 0 3em;
+	object-fit: contain;
 }
 #header ul {
 	border: 1px solid #fff;
 	display: none;
 	left: 50%;
 	margin-left: -45%;
+	margin-top: 70%;
 	padding: 0;
 	position: absolute;
 	width: 90%;
@@ -80,7 +84,7 @@ body {
 	width: 50px;
 }
 #body {
-	width: 100%;
+	width: 100vw;
 }
 #body h1 {
 	display: block;
@@ -94,6 +98,7 @@ body {
 	width: 94%;
 }
 #body > div {
+	flex-direction: column;
 	padding: 0 5%;
 	width: 90%;
 }
@@ -111,35 +116,31 @@ body {
 }
 #body #featured {
 	overflow: hidden;
-	margin: 0 0 20px
-}
-#body #featured img {
-	min-width: 960px;
+	margin: 0 auto;
+	justify-content: center;
+	height: 35vh;
+	background-position: 110% 10%;
 }
 #body #featured div {
-	left: 0;
-	margin: 0;
-	padding: 0 2%;
+	mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 60%, transparent 100%);
+	margin: 15em 0 0 5em;
+	padding: 0 5em;
 	position: absolute;
 	top: 0;
-	text-align: left;
-	width: 96%;
+	text-align: center;
+	width: 70%;
 }
 #body #featured div h2 {
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: normal;
-	margin: 50px 0 10px;
-	padding: 8px 5px;
 }
 #body #featured div span {
 	display: block;
-	font-size: 14px;
-	margin: 10px 0;
+	font-size: 1em;
 	padding: 10px;
 }
 #body #featured div a {
-	font-size: 14px;
-	margin: 5px 0 0;
+	font-size: 1em;
 	padding: 10px;
 }
 #body > ul {
@@ -163,9 +164,11 @@ body {
 	width: 42%;
 }
 #body > ul li a img {
-	width: 98%;
+	width: 100%;
+	height: 100%;
 }
 #body > ul li a span {
+	font-size: 0.5em;
 	padding: 15px 0;
 }
 #body div ul {
@@ -194,8 +197,8 @@ body {
 	width: 100%;
 }
 #body div ul li div a.more:hover {
-	height: 14px;
-	line-height: 14px;
+	height: 1em;
+	line-height: 1em;
 }
 #body form {
 	width: 100%;
@@ -212,16 +215,60 @@ body {
 	padding: 10px 0 25px;
 }
 #footer div {
-	overflow: visible;
 	width: 100%;
 }
 #footer div p {
 	float: none;
 	margin: 0;
 	text-align: center;
+	text-wrap: wrap;
 }
 #footer div ul {
+	align-items: center;
 	float: none;
 	margin: 0 auto;
-	width: 256px;
+	width: 70%;
+}
+#footer div ul li{
+	width: 22px;
+	height: 22px;
+	overflow: hidden;
+}
+#footer div ul li a{
+	background-size: 100%;
+}
+#footer div ul li #twitter {
+	background-position: 0 0;
+}
+#footer div ul li #twitter:hover {
+	background-position: -22px 0;
+}
+#footer div ul li #facebook {
+	background-position: 0 -22px;
+}
+#footer div ul li #facebook:hover {
+	background-position: -22px -22px;
+}
+#footer div ul li #googleplus {
+	background-position: 0 -44px;
+}
+#footer div ul li #googleplus:hover {
+	background-position: -22px -44px;
+}
+#footer div ul li #pinterest {
+	background-position: 0 -66px;
+}
+#footer div ul li #pinterest:hover {
+	background-position: -22px -66px;
+}
+
+#body{
+	font-size: 1em;
+}
+#body form{
+	font-size: 0.7em;
+}
+
+#footer{
+	font-size: 0.7em;
 }
